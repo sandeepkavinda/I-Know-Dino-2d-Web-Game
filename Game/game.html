@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Know Dino | Game</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="game.css">
+    <link rel="icon" href="./Img/icon.png">
+</head>
+
+<body onload="startDinoIdle(); createObsticals();" onkeyup="animationControler(event);">
+
+    <div class="loadingDiv">
+        <div class="preloader"></div>
+    </div>
+
+
+    <div class="fullScreenDiv" id="fullScreenDiv">
+        <img src="./Img/Idle (1).png" alt="" class="dinoImage" id="dinoImage" />
+
+        <div class="topBar">
+            <img src="./Img/Game title.png" alt="" class="title">
+            <div class="scoreBoard" id="scoreBoard">0</div>
+        </div>
+        <div class="startMessegeDiv" id="startMessegeDiv">Click Enter To Start Game ...</div>
+
+        <div class="endMessegeMainDiv" id="endMessegeMainDiv">
+            <div class="endMessegeSubDiv">
+                <img src="./Img/Game title.png" alt="" class="title">
+                <p class="gameOverMessage">Game Over Your Score Is</p>
+                <div class="scoreBoard endScoreBoard" id="endScoreBoard">0</div>
+                <div class="endButtons">
+                    <button class="tryAgainButton btn btn-dark col-5" onclick="gameTryAgain();">Try
+                        Again</button>
+                    <button class="tryAgainButton btn btn-primary col-5" onclick="gameHomePage();">Home</button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script src="game.js"></script>
+
+</body>
+
+</html>
